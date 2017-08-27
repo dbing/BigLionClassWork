@@ -13,7 +13,7 @@ class Man{
 }
 //对象：实例化类的结果
 $m1 = new Man;
-$m1->name = "小明";
+$m1->name = "xiaoming";
 $m1->age = 18;
 $m1->cry();
 var_dump($m1);

@@ -11,7 +11,7 @@ class CircleSize{
 	public function getS($a){
 		return $a * $a * 3.14;
 	}
-	public function getC(){
+	public function getC($a){
 		return $a * 2 * 3.14;
 	}
 }
