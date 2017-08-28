@@ -12,9 +12,7 @@ class Demo
 	}
 }
 
-
 // 类名::常量名
 echo Demo::pi;
-
 
 ?>
