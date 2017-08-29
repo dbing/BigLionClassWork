@@ -1,6 +1,6 @@
 <?php 
 
-  class Loop{
+  class cir{
 
   		public function circle($sum)
   		{
@@ -11,6 +11,6 @@
   		}
 
   }
-  $data = new Loop;
-  $data->circle("60");
+  $cir = new cir;
+  $cir->circle("60");
  ?>
