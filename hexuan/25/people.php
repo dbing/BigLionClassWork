@@ -1,6 +1,6 @@
 <?php 
 header("content-type:text/html;charset=utf-8");
-  class Man{
+  class people{
   	   public $name;
   	   public $age;
   	   public function Sort($user,$age)
@@ -9,20 +9,18 @@ header("content-type:text/html;charset=utf-8");
   	   	   $this->age  =  $age;
   	   	   echo $this->name;
   	   }
-  	   //构造函数
   	   public function __construct()
   	   {
-  	   	   echo "尊敬的~";
+  	   	   echo "同学~";
   	   }
-  	   //析构函数
   	    public function __destruct()
   	   {
-  	   	   echo " 马上要".$this->age;
+  	   	   echo "今年".$this->age;
   	   }
   }
 	 	$dome =  new Man;
-	 	$name = "小明同志";
-	 	$age = "下学了";
+	 	$name = "小花花";
+	 	$age = "12";
 	 	$data = $dome->Sort($name,$age);
 		echo($data);
 
