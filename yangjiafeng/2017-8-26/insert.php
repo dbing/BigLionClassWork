@@ -1,5 +1,6 @@
 <?php 
 	
+	// phpinfo();
 	error_reporting(E_ALL ^E_DEPRECATED);
 	
 	//连接数据库
@@ -19,6 +20,7 @@
 	$sql = "INSERT INTO user (name,pwd) VALUE ('zhangsna','123')";
 	$res = mysql_query($sql);
 	var_dump($res);
+
 
 
 
