@@ -2,20 +2,39 @@
 //杨嘉峰
 //2017年8月29日23:26:23
 //phpinfo();
+header("content-type:text/html;charset=utf-8");
+require "MySql.class.php";
+require "Upload.class.php";
 
-var_dump($_FILES);
+$db = new MySql();
+$up = new Upload();
+$result = $up->uploadOne($_FILES);
 
-var_dump($_POST);
+$imgname = $_POST['imgname'];
+//var_dump($result);
 
-$name = $_FILES['img']['name'];
-$tmp_name = $_FILES['img']['tmp_name'];
-$error = $_FILES['img']['error'];
-
-if(error==0)
+if($result)
 {
-    $bool = move_uploaded_file($tmp_name,$name);
-    var_dump($bool);
+    // 入库
+    $sql = "INSERT INTO photo (name,img) VALUES ('$imgname','$result')";
+    $res = $db->insert($sql);
+//    var_dump($res);
 }
+else
+{
+    // 输出错误消息
+    echo $up->getError();
+}
+
+
+
+
+
+
+
+
+
+?>
 
 
 
