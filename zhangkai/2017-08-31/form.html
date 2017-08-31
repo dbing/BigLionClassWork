@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<center>
+	<form action="upload.php" method="post" enctype="multipart/form-data">
+		<table>
+			<tr>
+				<td>名称：</td>
+				<td><input type="text" name="sname"></td>
+			</tr>
+			<tr>
+				<td>图片：</td>
+				<td><input type="file" name="img[]" multiple="multiple"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="提交"></td>
+			</tr>
+		</table>
+	</form>
+</center>
+</body>
+</html>
