@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 class Upload
 {
 	private $error;
@@ -6,7 +6,7 @@ class Upload
 	public function doUp($file)
 	{
 	
-		// 获取文件信息
+		
 		$name = $file['img']['name'];
 		$tmp_name = $file['img']['tmp_name'];
 		$error = $file['img']['error'];	
