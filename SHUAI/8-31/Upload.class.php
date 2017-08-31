@@ -28,6 +28,7 @@ class Upload
                     $resut[$key] = $this->uploadOne($val);
                 }
             }
+            return $resut;
         }
         $this->error = '多文件失败';
         return false;
