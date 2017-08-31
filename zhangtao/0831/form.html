@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文件上传</title>
+</head>
+<body>
+	<center>
+		<form action="doupload.php" method="post" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td>图片名称</td>
+					<td><input type="text" name='filename'></td>
+				</tr>
+				<tr>
+					<td>上传图片</td>
+					<td><input type="file" multiple="multiple" name="file[]"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="添加图片"></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
