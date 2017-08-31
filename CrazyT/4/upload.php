@@ -11,13 +11,13 @@ require "Upload.class.php";
 
 $db = new MySql();
 $up = new Upload();
-$res = $up->upload($_FILES);
+$res = $up->uploadOne($_FILES);
 
-$imgname = $_POST['imgname'];
+$name = $_POST['name'];
 
 if($res)
 {
-    $sql = "INSERT INTO img (name,img) VALUES ('$imgname','$res')";
+    $sql = "INSERT INTO img (name,img) VALUES ('$name','$res')";
     $res = $db->insert($sql);
 
 }

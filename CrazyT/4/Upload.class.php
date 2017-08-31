@@ -10,7 +10,7 @@ class Upload
 {
     private $error;
 
-    public function upload($file)
+    public function uploadOne($file)
     {
         //获取文件信息
         $name = $file['img']['name'];
