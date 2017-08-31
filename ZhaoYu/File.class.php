@@ -1,18 +1,30 @@
 <?php 
 /*
-	 name:Zhao Yu
-	 hobby:吃喝玩乐
-
+ * Created by 
+ * User : Zhao Yu
+ * Hobby: 吃饭睡觉打豆豆
  */ 
   class File{
   		 private $file = array();
   		 private $size = 2;
   		 public  $error = "";
   		 public  $type =array('image/jpeg','image/gif','image/png','image/jpg');
+
+       public function picture($img)
+       {
+           if(isset($img) && is_array($img))
+           {
+              foreach ($img as $key => $value) {
+                   $imgs[$key] = $this->img($value);
+              }
+              return $imgs;
+           }
+       }
+
   		 public function img($img)
   		 {		
   		 	    //判断大小
-  		 		$this->file = $_FILES[$img];
+  		 		$this->file = $img;
   		 		if($this->file['size'] > $this->size*1024*1024 )
 	  		 	{
 	  		 		$this ->error = "文件过大";
@@ -27,9 +39,9 @@
 
   		 		if($this->file['error'] == 0)
   		 		{
-					$file = $this->file['name'];//提取照片中的name
+					  $file = $this->file['name'];//提取照片中的name
 	    			$sub = strstr($file,".");//截取后缀名
-	    			$time = time().$sub;
+	    			$time = rand(0,999).$sub;
 	    			$url = "./imgs/".date("Y-m-d",time());
 	    			if(!file_exists($url))//判断是负有文件夹
 	    			{

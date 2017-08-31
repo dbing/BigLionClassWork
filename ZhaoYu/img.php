@@ -13,7 +13,11 @@
 						</tr>
 						<tr>
 							<td>picture:</td>
-							<td><input type="file" name="img"></td>
+							<td><input type="file" name="img[]"></td>
+						</tr>
+							<tr>
+							<td>picture:</td>
+							<td><input type="file" name="img[]"></td>
 						</tr>
 						<tr>
 							<td><input type="submit"></td>

@@ -17,9 +17,12 @@
 
 
            //添加
-           public function insert($name,$img)
+           public function insert($are)
            {
-              return mysql_query("insert into img(name,imgs) values('$name','$img')");
+              foreach ($are as $key => $value) {
+               $que = mysql_query($value);
+              }
+                return $que;
            }
    }
 
