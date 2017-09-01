@@ -153,8 +153,12 @@ class MySql implements Date
            $res = mysqli_query($sql);
            if($res)
            {
-               $row[] = mysqli_fetch_row($res);
-               return  $row;
+               while ($row = mysqli_fetch_assoc($res))
+               {
+                   $list[] = $row;
+               }
+
+               return  $list;
            }else
            {
                $this->error = mysqli_error();
