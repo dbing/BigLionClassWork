@@ -1,7 +1,7 @@
 <?php 
-require "MySql.class.php";
-header("content-type:text/html;charset=utf-8");
-$db = new MySql;
+require "MySql.class.php"pe:text/html;charset=utf-8");
+$db = new MySql;;
+header("content-ty
 
 $id = $_GET['id'];
 
@@ -15,8 +15,8 @@ if($res === false)
 	echo '删除失败';
 }
 else
-{
-	echo '删除成功';
+	echo '删除成功
+{';
 
 }
 
