@@ -14,11 +14,11 @@ $res = $db->update($sql);
 // var_dump($res);
 if($res === false)
 {
-	echo '修改失败';
+echo '修改失败';
 }
 else
 {
-	echo '修改成功';
+echo '修改成功';
 }
 
 ?>
