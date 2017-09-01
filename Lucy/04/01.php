@@ -1,4 +1,5 @@
-<?php 
+<?php
+header('content-type:text/html;charset=utf8');
 class Rich
 {
 	public $name="王思聪";

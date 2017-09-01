@@ -7,25 +7,18 @@ class MySql
 
 	public function __construct($host='localhost',$port=3306,$user='root',$pwd='root',$dbName='test',$charSet='utf8')
 	{
-		// 1.连接MySQL
 		$conn = mysql_connect($host.':'.$port,$user,$pwd);
 		if(!$conn)
 		{
 			die(mysql_error());
 		}
-		// 2.选库
 		mysql_select_db($dbName) or die(mysql_error());
-		// 3.设置字符
-		mysql_query('set names '.$charSet) or die(mysql_error());		
+		mysql_query('set names '.$charSet) or die(mysql_error());
 	}
 
 	/**
-	 * 新增数据
-	 *
-	 * @author BING
-	 * @param  string  $sql 插入的SQL
-	 * @return bool      
-	 */
+	 * 增
+	*/
 	public function insert($sql)
 	{
 
@@ -34,10 +27,7 @@ class MySql
 	}
 
 	/**
-	 * 查询多行
-	 *
-	 * @author BING
-	 * @return array
+	 * 查
 	 */
 	public function getAll($sql)
 	{
@@ -73,11 +63,7 @@ class MySql
 	}
 
 	/**
-	 * 删除
-	 *
-	 * @author BING
-	 * @param  string  $sql SQL语句
-	 * @return bool      
+	 * 删
 	 */
 	public function delete($sql)
 	{
@@ -94,11 +80,7 @@ class MySql
 	}
 
 	/**
-	 * 修改
-	 *
-	 * @author BING
-	 * @param  string  $sql SQL语句
-	 * @return bool/int      
+	 * 改
 	 */
 	public function update($sql)
 	{

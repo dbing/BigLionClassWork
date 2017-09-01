@@ -2,14 +2,14 @@
 header("Content-type:text/html;charset=utf-8;");
 
 require "MySql.class.php";
-require "Upload.class.php";
+require "Up.php";
 
 $db = new MySql();
-$up = new Upload();
-$result = $up->uploadOne($_FILES);
+$up = new Up();
+$result = $up->uploadOne($_FILES['img']);
 
 $imgname = $_POST['imgname'];
-//var_dump($result);     
+//var_dump($result); die;
 
 if($result)
 {

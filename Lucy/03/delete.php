@@ -1,4 +1,5 @@
-<?php 
+<?php
+header('content-type:text/html;charset = utf-8');
 require "MySql.class.php";
 $db = new MySql;
 

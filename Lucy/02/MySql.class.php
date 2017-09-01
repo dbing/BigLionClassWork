@@ -1,44 +1,29 @@
-<?php 
+<?php
+header('content-type:text/html;charset=utf-8');
 error_reporting(E_ALL ^E_DEPRECATED);
-
 class MySql
 {
 	public $error;
 
 	public function __construct()
 	{
-		// 1.连接MySQL
 		$conn = mysql_connect('127.0.0.1','root','root');
 		if(!$conn)
 		{
 			die(mysql_error());
 		}
-		// 2.选库
 		mysql_select_db('test') or die(mysql_error());
-		// 3.设置字符
-		mysql_query('set names utf8') or die(mysql_error());		
+		mysql_query('set names utf8') or die(mysql_error());
 	}
 
-	/**
-	 * 新增数据
-	 *
-	 * @author BING
-	 * @param  string  $sql 插入的SQL
-	 * @return bool      
-	 */
+	//增
 	public function insert($sql)
 	{
-
 		$result = mysql_query($sql);
 		return $result;
 	}
 
-	/**
-	 * 查询多行
-	 *
-	 * @author BING
-	 * @return array
-	 */
+	//查询多条
 	public function getAll($sql)
 	{
 		$result = mysql_query($sql);
