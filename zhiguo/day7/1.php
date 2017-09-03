@@ -27,9 +27,9 @@ public function __isset($param){
 public function __unset($param){
 	var_dump('执行了'.$param);
 }
-public function __call($key,$value){
-	var_dump($key);
-	var_dump($value);
+public function __call($k,$v){
+	var_dump($k);
+	var_dump($v);
 }
 
 public static function __callStatic($name, $arguments) 
@@ -40,7 +40,7 @@ public static function __callStatic($name, $arguments)
    
 }	
 }
-// $m=new Man();
+ $m=new Man();
 // var_dump($m);
 // echo '<br>';
 // $new = clone $m;
@@ -56,9 +56,9 @@ public static function __callStatic($name, $arguments)
 //isset($m->modey);
 // unset($m->money);
 
- //$m->getDemo();
+ //$m->Demo();
 
 
 // $m->getMoeny(1,'bing');
 
- // Man::getCar(1,'xxx','yyy');
+ // Man::getCat(1,'xxx','yyy');

@@ -30,13 +30,13 @@ class Man
 $m->getFunction();
 
 echo '<hr>';
-echo '当前行号:'.__LINE__;
+echo '行号:'.__LINE__;
 
 echo '<hr>';
 echo '当前的文件:'.__FILE__;
 
 echo '<hr>';
-echo '当前目录：'.__DIR__;
+echo '当前的目录：'.__DIR__;
 
 echo '<hr>';
 echo basename(__FILE__);

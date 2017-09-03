@@ -8,20 +8,20 @@
 // 	include($class.'.class.php');
 // }
 
-function myAutoLoader1($name)
+function my1($name)
 {
 
 	@include ($name.'.class.php');
 }
 
-function myAutoLoader2($name)
+function my2($name)
 {
 	var_dump('auto2 class-->'.$name);
-	@include 'lib/'.$name.'.class.php';
+	@include ('lib/'.$name.'.class.php');
 }
 
-spl_autoload_register('myAutoLoader1');
- spl_autoload_register('myAutoLoader2');
+spl_autoload_register('my1');
+spl_autoload_register('my2');
 
 
 
