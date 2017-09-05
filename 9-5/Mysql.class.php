@@ -8,7 +8,7 @@
 
 		 public $error;
 		 public $id;
-		 public function __construct()
+		 private function __construct()
 		 {
 		 	mysql_connect("127.0.0.1",'root','419479');
 		 	mysql_select_db("yue");
@@ -84,7 +84,15 @@
 	  		}
 	  	 }
 
+	  	 public static function one_Line()
+	  	 {
+	  	 	 static $info;
+	  	 	  if(empty($info))
+	  	 	  {
+	  	 	  	$info = new Mysql;
+	  	 	  }
+	  	 	  return $info;
+	  	 }
 	}
-
 
  ?>
