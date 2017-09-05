@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户列表展示</title>
+</head>
+<body>
+	<center>
+		<table border="1">
+			<tr>
+				<td>ID</td>
+				<td>User</td>
+				<td>Pwd</td>
+			</tr>
+			{foreach $data as $v}
+			<tr>
+				<td>{$v.id}</td>
+				<td>{$v.username}</td>
+				<td>{$v.userpwd}</td>
+			</tr>
+			{/foreach}
+		</table>
+	</center>
+</body>
+</html>

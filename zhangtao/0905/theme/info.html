@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>INFO</title>
+</head>
+<body>
+	<h1>读取的数组</h1>
+	<!-- 变量修饰器：upper（变换为大写） -->
+	姓名：{$info.name|upper} <br>
+	年龄：{$info.age}
+
+	<h1>运算</h1>
+	和：{$num+$num2}
+
+	<hr />
+	<h1>保留变量</h1>
+	页码：{$page|default:5} <br>
+	<!-- 变量修饰器：truncate（截取:格式） -->
+	IP：{$smarty.server.SERVER_NAME|truncate:8:'-'}
+
+	<h1>循环</h1>
+	<ul>
+		{for $i=1 to 5}
+		<li>{$i}</li>
+		{/for}
+	</ul>
+</body>
+</html>
