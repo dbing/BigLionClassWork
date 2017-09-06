@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        {foreach $list as $v}
+        <tr>
+            <td>{$v.name}</td>
+            <td>{$v.pwd}</td>
+            <td>删除</td>
+        </tr>
+        {/foreach}
+    </table>
+</body>
+</html>
