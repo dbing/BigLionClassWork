@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>数组的读取</h1>
+    <h1>{$info['sname']}</h1>
+    <h1>{$info['pwd']}</h1>
+
+    <h1>读取配置文件</h1>
+
+    {$smarty.config.name}
+    <p>{#pageTitle#}</p>
+
+    <h1>{$sex}</h1>
+    <hr>
+    <h1>保留变量</h1>
+    <p>{$page}</p>
+    <p>{$smarty.get.page|default}</p>
+    <p>{$smarty.server.HTTP_HOST}</p>
+
+    <h1>for</h1>
+    <ul>
+        {for $i=1 to 5}
+        <li>{$i}</li>
+        {/for}
+    </ul>
+    {if $sex eq '男'}睡个{/if}
+    {include file="foot.html"}
+</body>
+<script>
+    {literal}
+    function hi() {
+        alert(1111);
+    }
+    {/literal}
+</script>
+</html>
