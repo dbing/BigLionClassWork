@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>数组的读取</h1>
+<p>{$name}</p>
+<p>{$age}</p>
+<h1>读取配置文件</h1>
+<p>{config_load file="fig.conf"}</p>
+<h1>保留变量</h1>
+<p>{$page}</p>
+<p>{$smarty.get.page|default:1}</p>
+<p>{$smarty.server.HTTP_HOST|truncate:s:'---}</p>
+<p>{$smarty.now|date_format:'%D'}</p>
+
+<h1>for</h1>
+<ul>
+    {for $i=1 to 5}
+    <li>{$i}</li>
+{/for}
+</ul>
+
+{include file="footer.html"}
+</body>
+<script>
+    {literal}
+    function hi() {alert('h1');}
+    {/literal}
+</script>
+</html>
