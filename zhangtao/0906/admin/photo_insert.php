@@ -1,0 +1,32 @@
+<?php
+/**
+ * @author 张涛 2017/09/07
+ * @param  执行分类添加
+ */
+require 'init.php';
+
+
+$post = $_POST;
+
+//上传相片
+$up = new Upload();
+$up->size = 8; //修改限制图片大小为8M内
+
+$photoPath = $up->uploadOne($_FILES['photo_path']);
+if(!$photoPath)
+{
+	die($up->getError());
+}
+
+$post['photo_path'] = $photoPath;
+$post['add_time'] = time();
+
+$res = $db->add('photo', $post);
+if($res > 0)
+{
+	echo '上传相片成功';
+}
+else
+{
+	echo $db->getError();
+}
