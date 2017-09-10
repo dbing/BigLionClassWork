@@ -37,18 +37,20 @@
 							<th>管理操作</th>
 						</tr>
 						<!-- 循环开始处 -->
+						{foreach $catList as $val}
 						<tr>
-							<td>1</td>
-							<td>丽江风景</td>
-							<td>国内风景</td>
-							<td>100</td>
-							<td>2015-11-22 23:18:48</td>
+							<td>{$val['cat_id']}</td>
+							<td>{$val['cat_name']}</td>
+							<td>{$val['parent_id']}</td>
+							<td>{$val['sort']}</td>
+							<td>{date('Y/m/d H:i:s', $val['create_time'])}</td>
 							<td>
 								
 							<a href=""><i class="fa fa-edit"></i>编辑</a> |
 							<a href=""><i class="fa fa-times"></i>删除</a>
 							</td>
 						</tr>
+						{/foreach}
 						<!-- 循环结束处 -->
 
 					</table>
@@ -77,5 +79,7 @@
 </div>
 <script type="text/javascript">
 </script>
+</body>
+</html>
 <!-- 版权开始处 -->
 {include file='footer.html'}

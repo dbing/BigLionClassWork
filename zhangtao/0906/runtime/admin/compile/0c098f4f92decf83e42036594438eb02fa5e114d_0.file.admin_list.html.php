@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-09-07 22:38:13
+/* Smarty version 3.1.30, created on 2017-09-10 18:20:22
   from "D:\phpStudy\anzhuang\WWW\new-two\0906\admin\tpl\admin_list.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59b159d5e397e8_72351070',
+  'unifunc' => 'content_59b511e6660312_66441743',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0c098f4f92decf83e42036594438eb02fa5e114d' => 
     array (
       0 => 'D:\\phpStudy\\anzhuang\\WWW\\new-two\\0906\\admin\\tpl\\admin_list.html',
-      1 => 1504795090,
+      1 => 1505038818,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:header.html' => 1,
     'file:nav.html' => 1,
+    'file:footer.html' => 1,
   ),
 ),false)) {
-function content_59b159d5e397e8_72351070 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59b511e6660312_66441743 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,17 +67,37 @@ function content_59b159d5e397e8_72351070 (Smarty_Internal_Template $_smarty_tpl)
 							<th>管理操作</th>
 						</tr>
 						<!-- 循环开始处 -->
+						<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['adminList']->value, 'val');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['val']->value) {
+?>
 						<tr>
-							<td>1</td>
-							<td>测试</td>
-							<td><font color="red">已锁定</font></td>
-							<td>2015-11-22 23:18:48</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['val']->value['admin_id'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['val']->value['admin_name'];?>
+</td>
 							<td>
-								
+								<?php if ($_smarty_tpl->tpl_vars['val']->value['status'] == 1) {?>
+									<font color="red">已锁定</font></td>
+								<?php } else { ?>
+									<font color="green">未锁定</font>
+								<?php }?>
+							</td>
+							<td><?php echo date('Y/m/d H:i:s',$_smarty_tpl->tpl_vars['val']->value['create_time']);?>
+</td>
+
+							<td>
 							<a href=""><i class="fa fa-edit"></i>编辑</a> |
 							<a href=""><i class="fa fa-times"></i>删除</a>
 							</td>
 						</tr>
+						<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 						<!-- 循环结束处 -->
 
 					</table>
@@ -129,5 +150,7 @@ function content_59b159d5e397e8_72351070 (Smarty_Internal_Template $_smarty_tpl)
 	}
 <?php echo '</script'; ?>
 >
-<?php }
+<!-- 版权开始处 -->
+<?php $_smarty_tpl->_subTemplateRender("file:footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
 }

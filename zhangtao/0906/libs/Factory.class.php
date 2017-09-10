@@ -26,4 +26,5 @@ class Factory
 		$smarty->cache_dir    = ROOT_PATH . '/runtime/admin/cache';   //缓存目录
 		return $smarty;
 	}
+	
 }

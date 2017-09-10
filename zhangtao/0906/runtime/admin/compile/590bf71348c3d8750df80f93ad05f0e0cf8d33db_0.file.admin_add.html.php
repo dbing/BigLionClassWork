@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-09-07 22:40:02
+/* Smarty version 3.1.30, created on 2017-09-10 18:08:41
   from "D:\phpStudy\anzhuang\WWW\new-two\0906\admin\tpl\admin_add.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59b15a42263c10_38375242',
+  'unifunc' => 'content_59b50f294fefc8_71763240',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '590bf71348c3d8750df80f93ad05f0e0cf8d33db' => 
     array (
       0 => 'D:\\phpStudy\\anzhuang\\WWW\\new-two\\0906\\admin\\tpl\\admin_add.html',
-      1 => 1504795162,
+      1 => 1505038117,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:header.html' => 1,
     'file:nav.html' => 1,
+    'file:footer.html' => 1,
   ),
 ),false)) {
-function content_59b15a42263c10_38375242 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59b50f294fefc8_71763240 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +49,7 @@ function content_59b15a42263c10_38375242 (Smarty_Internal_Template $_smarty_tpl)
 <!-- /.row -->
 <div class="row">
 <div class="col-lg-12">
-<form id="form1" action="project_insert.php" method="post" role="form" enctype="multipart/form-data">
+<form id="form1" action="admin_insert.php" method="post" role="form" enctype="multipart/form-data">
 
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -59,22 +60,22 @@ function content_59b15a42263c10_38375242 (Smarty_Internal_Template $_smarty_tpl)
 
                 <div class="form-group">
                     <label>管理员账户</label>
-                    <input type="text" name="title" class="form-control" value="" placeholder="UserName" />
+                    <input type="text" name="admin_name" class="form-control" value="" placeholder="UserName" />
                 </div>
                 <div class="form-group">
                     <label>密码</label>
-                    <input type="password" name="title" class="form-control" value="" placeholder="Password" />
+                    <input type="password" name="admin_pwd" class="form-control"  placeholder="Password" />
                 </div>
                 <div class="form-group">
                     <label>确认密码</label>
-                    <input type="password" name="title" class="form-control" value="" placeholder="ConfirmPassword"  />
+                    <input type="password" class="form-control" placeholder="ConfirmPassword"  />
                 </div>
 
                 <div class="form-group">
                     <label>帐号类型</label>
                     <div class="checkbox">
                         <label class="checkbox-inline">
-                            <input type="checkbox" name="is_lock" value="1" /> 锁定
+                            <input type="checkbox" name="status" value="1" /> 锁定
                         </label>
                     </div>
                 </div>
@@ -87,5 +88,8 @@ function content_59b15a42263c10_38375242 (Smarty_Internal_Template $_smarty_tpl)
 </form>
 </div>
 </div>
-</div><?php }
+</div>
+<!-- 版权开始处 -->
+<?php $_smarty_tpl->_subTemplateRender("file:footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
 }

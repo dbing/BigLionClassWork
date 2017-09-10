@@ -1,28 +1,29 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-09-07 22:30:17
+/* Smarty version 3.1.30, created on 2017-09-09 10:27:27
   from "D:\phpStudy\anzhuang\WWW\new-two\0906\admin\tpl\cat_list.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59b157f986f237_47893246',
+  'unifunc' => 'content_59b3518f2475f7_49912328',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5301e2563bee537479225d3ea9021b2b1ea6c6ba' => 
     array (
       0 => 'D:\\phpStudy\\anzhuang\\WWW\\new-two\\0906\\admin\\tpl\\cat_list.html',
-      1 => 1504794616,
+      1 => 1504924044,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.html' => 1,
-    'file:menu.html' => 1,
+    'file:nav.html' => 1,
+    'file:footer.html' => 1,
   ),
 ),false)) {
-function content_59b157f986f237_47893246 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59b3518f2475f7_49912328 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,39 +36,9 @@ function content_59b157f986f237_47893246 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 <div id="wrapper">
 	<!-- Navigation -->
-	<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">相册管理系统</a>
-		</div>
-		<!-- /.navbar-header -->
-
-		<ul class="nav navbar-top-links navbar-right">
-			<!-- /.dropdown -->
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-					<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout
-				</a>
-				<ul class="dropdown-menu dropdown-user">
-					<li><a href="login.php?action=out"><i class="fa fa-sign-out fa-fw"></i>退出登录</a>
-					</li>
-				</ul>
-				<!-- /.dropdown-user -->
-			</li>
-			<!-- /.dropdown -->
-		</ul>
-		<!-- /.navbar-top-links -->
-
-		<div class="navbar-default sidebar" role="navigation">
-			<div class="sidebar-nav navbar-collapse">
-				<!-- 包含目录 -->
-				<?php $_smarty_tpl->_subTemplateRender("file:menu.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+	<?php $_smarty_tpl->_subTemplateRender("file:nav.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-			</div>
-			<!-- /.sidebar-collapse -->
-		</div>
-		<!-- /.navbar-static-side -->
-	</nav>
 <div id="page-wrapper">
 <form id="form1" runat="server">
 <div class="row">
@@ -97,18 +68,34 @@ function content_59b157f986f237_47893246 (Smarty_Internal_Template $_smarty_tpl)
 							<th>管理操作</th>
 						</tr>
 						<!-- 循环开始处 -->
+						<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['catList']->value, 'val');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['val']->value) {
+?>
 						<tr>
-							<td>1</td>
-							<td>丽江风景</td>
-							<td>国内风景</td>
-							<td>100</td>
-							<td>2015-11-22 23:18:48</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['val']->value['cat_id'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['val']->value['cat_name'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['val']->value['parent_id'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['val']->value['sort'];?>
+</td>
+							<td><?php echo date('Y/m/d H:i:s',$_smarty_tpl->tpl_vars['val']->value['create_time']);?>
+</td>
 							<td>
 								
 							<a href=""><i class="fa fa-edit"></i>编辑</a> |
 							<a href=""><i class="fa fa-times"></i>删除</a>
 							</td>
 						</tr>
+						<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 						<!-- 循环结束处 -->
 
 					</table>
@@ -139,5 +126,9 @@ function content_59b157f986f237_47893246 (Smarty_Internal_Template $_smarty_tpl)
  type="text/javascript">
 <?php echo '</script'; ?>
 >
-<?php }
+</body>
+</html>
+<!-- 版权开始处 -->
+<?php $_smarty_tpl->_subTemplateRender("file:footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
 }
