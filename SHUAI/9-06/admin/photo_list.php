@@ -9,7 +9,8 @@
  * Time: 20:22
  */
 require 'init.php';
-$res = $db->select('photo');
+$photo = new PhotoModel();
+$res = $photo->select();
 $smarty->assign('res',$res);
 $smarty->display('photo_list.html')
 ?>

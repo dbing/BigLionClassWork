@@ -25,11 +25,16 @@ class Factory
      */
     static function getSmarty()
     {
+
         $smarty = new Smarty;
         $smarty->template_dir = ROOT_PATH .'/admin/tpl';
         $smarty->compile_dir = ROOT_PATH .'/runtime/admin/compile';
         $smarty->cache_dir = ROOT_PATH .'/runtime/admin/cache';
       return $smarty;
+    }
+    static function getDemo()
+    {
+        echo 'OK';
     }
 }
 ?>
