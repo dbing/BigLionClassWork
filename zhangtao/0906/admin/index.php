@@ -5,4 +5,6 @@
  */
 
 require 'init.php';
+$admin = new Upload;
+p($admin);
 $smarty->display('index.html');  //后台主页

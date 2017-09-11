@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-09-07 22:42:48
+/* Smarty version 3.1.30, created on 2017-09-09 09:46:48
   from "D:\phpStudy\anzhuang\WWW\new-two\0906\admin\tpl\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59b15ae8e60832_21118230',
+  'unifunc' => 'content_59b34808ab7905_16029168',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'af1461f6657160fe810a1af8b10a04e39b1c70cf' => 
     array (
       0 => 'D:\\phpStudy\\anzhuang\\WWW\\new-two\\0906\\admin\\tpl\\index.html',
-      1 => 1504795180,
+      1 => 1504795419,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:header.html' => 1,
     'file:nav.html' => 1,
+    'file:footer.html' => 1,
   ),
 ),false)) {
-function content_59b15ae8e60832_21118230 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59b34808ab7905_16029168 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -173,9 +174,6 @@ function content_59b15ae8e60832_21118230 (Smarty_Internal_Template $_smarty_tpl)
         </div><!-- /.panel -->
 </div>
 <!-- 版权开始处 -->
-<div class="row">
-	<div class="col-md-12">
-		<div class="well text-center">POWER BY ITBING.CN 必应科技有限公司版权所有</div>
-	</div>
-</div><?php }
+<?php $_smarty_tpl->_subTemplateRender("file:footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
 }

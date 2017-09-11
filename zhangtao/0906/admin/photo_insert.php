@@ -24,7 +24,7 @@ $post['add_time'] = time();
 $res = $db->add('photo', $post);
 if($res > 0)
 {
-	echo '上传相片成功';
+	$smarty->display('photo_list.html');
 }
 else
 {
