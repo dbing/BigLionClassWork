@@ -37,7 +37,7 @@
                     <label>请选择分类</label>
 					<select name="cat_id" id="" class="form-control">
                         <option value="0">请选择...</option>
-                        {foreach $cart_list as $val}
+                        {foreach $cat_list as $val}
 						<option value="{$val['cat_id']}">{$val['cat_name']}</option>
                         {/foreach}
 					</select>

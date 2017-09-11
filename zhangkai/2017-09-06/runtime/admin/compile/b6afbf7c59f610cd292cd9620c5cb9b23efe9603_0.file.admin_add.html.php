@@ -1,13 +1,44 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-09-11 13:26:21
+  from "D:\new\htdocs\htdocs\Homework\11day\admin\tpl\admin_add.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59b672dd710ca2_63234968',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'b6afbf7c59f610cd292cd9620c5cb9b23efe9603' => 
+    array (
+      0 => 'D:\\new\\htdocs\\htdocs\\Homework\\11day\\admin\\tpl\\admin_add.html',
+      1 => 1505129165,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.html' => 1,
+    'file:navigater.html' => 1,
+    'file:footer.html' => 1,
+  ),
+),false)) {
+function content_59b672dd710ca2_63234968 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {include file="header.html"}
+    <?php $_smarty_tpl->_subTemplateRender("file:header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 </head>
 
 <body>
 <div id="wrapper">
     <!-- Navigation -->
-    {include file="navigater.html"}
+    <?php $_smarty_tpl->_subTemplateRender("file:navigater.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 <div id="page-wrapper">
 <div class="row">
   <div class="col-lg-12">
@@ -59,4 +90,6 @@
 </div>
 </div>
     <!-- 版权开始处 -->
-    {include file="footer.html"}
+    <?php $_smarty_tpl->_subTemplateRender("file:footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

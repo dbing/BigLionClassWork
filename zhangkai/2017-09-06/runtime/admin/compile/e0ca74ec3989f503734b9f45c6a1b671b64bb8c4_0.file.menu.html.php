@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-09-07 15:07:36
+/* Smarty version 3.1.30, created on 2017-09-11 12:55:16
   from "D:\new\htdocs\htdocs\Homework\11day\admin\tpl\menu.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59b14498ba2fe5_50451561',
+  'unifunc' => 'content_59b66b943f0164_63135998',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e0ca74ec3989f503734b9f45c6a1b671b64bb8c4' => 
     array (
       0 => 'D:\\new\\htdocs\\htdocs\\Homework\\11day\\admin\\tpl\\menu.html',
-      1 => 1481962717,
+      1 => 1505127315,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59b14498ba2fe5_50451561 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59b66b943f0164_63135998 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <ul class="nav" id="side-menu">
     <li>
@@ -45,10 +45,10 @@ function content_59b14498ba2fe5_50451561 (Smarty_Internal_Template $_smarty_tpl)
         <a href="#"><i class="fa fa-comment fa-fw"></i> 分类管理<span class="arrow glyphicon glyphicon-th-list"></span></a>
         <ul class="nav nav-second-level">
             <li>
-                <a href="cat_add.html">添加分类</a>
+                <a href="cat_add.php">添加分类</a>
             </li>
             <li>
-                <a href="cat_list.html">分类列表</a>
+                <a href="cat_list.php">分类列表</a>
             </li>
         </ul>
         <!-- /.nav-second-level -->
@@ -57,10 +57,10 @@ function content_59b14498ba2fe5_50451561 (Smarty_Internal_Template $_smarty_tpl)
         <a href="#"><i class="fa fa-comment fa-fw"></i> 账户管理<span class="arrow glyphicon glyphicon-user"></span></a>
         <ul class="nav nav-second-level">
             <li>
-                <a href="admin_add.html">添加管理员</a>
+                <a href="admin_add.php">添加管理员</a>
             </li>
             <li>
-                <a href="admin_list.html">管理员列表</a>
+                <a href="admin_list.php">管理员列表</a>
             </li>
         </ul>
         <!-- /.nav-second-level -->
