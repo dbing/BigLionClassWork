@@ -542,7 +542,7 @@ class Smarty_Internal_TestInstall
                       'modifier.date_format.php' => true, 'modifier.debug_print_var.php' => true,
                       'modifier.escape.php' => true, 'modifier.regex_replace.php' => true,
                       'modifier.replace.php' => true, 'modifier.spacify.php' => true, 'modifier.truncate.php' => true,
-                      'modifiercompiler.cat.php' => true, 'modifiercompiler.count_characters.php' => true,
+                      'modifiercompiler.category.php' => true, 'modifiercompiler.count_characters.php' => true,
                       'modifiercompiler.count_paragraphs.php' => true, 'modifiercompiler.count_sentences.php' => true,
                       'modifiercompiler.count_words.php' => true, 'modifiercompiler.default.php' => true,
                       'modifiercompiler.escape.php' => true, 'modifiercompiler.from_charset.php' => true,

@@ -1,9 +1,39 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-09-09 03:38:38
+  from "E:\wamp64\www\9yue\BigLionClassWork\SHUAI\9-06\admin\tpl\admin_add.html" */
 
-{include file="top.html"}
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59b3623e90a3c4_68542668',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'bd62a4b2eda9eaabc4136ef99a1ea4e94704cee3' => 
+    array (
+      0 => 'E:\\wamp64\\www\\9yue\\BigLionClassWork\\SHUAI\\9-06\\admin\\tpl\\admin_add.html',
+      1 => 1504928260,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:top.html' => 1,
+    'file:nav.html' => 1,
+  ),
+),false)) {
+function content_59b3623e90a3c4_68542668 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+<?php $_smarty_tpl->_subTemplateRender("file:top.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 <body>
 <div id="wrapper">
     <!-- Navigation -->
-    {include file="nav.html"}
+    <?php $_smarty_tpl->_subTemplateRender("file:nav.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 <div id="page-wrapper">
 <div class="row">
   <div class="col-lg-12">
@@ -53,4 +83,5 @@
 </form>
 </div>
 </div>
-</div>
+</div><?php }
+}

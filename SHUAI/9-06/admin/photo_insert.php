@@ -23,11 +23,12 @@ $data['photo_path'] = $photo_path;
 $data['add_time'] = time();
 
 $res = $db->add('photo',$data);
-var_dump($res);die;
-if($res ===false){
-echo $db->getError();
-die('失败');
+if($res)
+{
+    success('添加成功','cat_list.php');
 }else{
-die('成功');
+    echo $db->getError();
+
+    error('添加失败','cat_list.php');
 }
 ?>

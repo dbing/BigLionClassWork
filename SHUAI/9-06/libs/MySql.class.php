@@ -44,7 +44,8 @@ class MySql implements Date
            $sql = "INSERT INTO $table";
            $sql .= '('.implode(',', array_keys($data)).')';
            $sql .= 'VALUES ';
-           $sql .= "('".implode("','",array_values($data))."')'";
+           $sql .= "('".implode("','",array_values($data))."')";
+
         $res = mysqli_query($this->mysql(),$sql);
         if($res)
            {
