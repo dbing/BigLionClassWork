@@ -4,7 +4,8 @@
  * @param  相册列表
  */
 require 'init.php';
-
+// 检测用户是否登录
+checkLogin();
 
 $photoList = $db->select('photo');
 $smarty->assign('photoList', $photoList);

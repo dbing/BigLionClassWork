@@ -5,6 +5,7 @@
  */
 
 require 'init.php';
-$admin = new Upload;
-p($admin);
+// 检测用户是否登录
+checkLogin();
+
 $smarty->display('index.html');  //后台主页

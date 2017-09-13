@@ -26,5 +26,13 @@ class Factory
 		$smarty->cache_dir    = ROOT_PATH . '/runtime/admin/cache';   //缓存目录
 		return $smarty;
 	}
+	/**
+	 * 读取配置项
+	 */
+	static function getSetting()
+	{
+		return require ROOT_PATH .'/config/setting.php';
+
+	}
 	
 }

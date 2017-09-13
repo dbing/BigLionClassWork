@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-09-12 22:05:58
+  from "D:\phpStudy\anzhuang\WWW\new-two\0906\admin\tpl\login.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59b7e9c6c8fbc2_70221334',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2aca1cb92b26f3f0e07ff4bcdbaea0628541129b' => 
+    array (
+      0 => 'D:\\phpStudy\\anzhuang\\WWW\\new-two\\0906\\admin\\tpl\\login.html',
+      1 => 1505225157,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_59b7e9c6c8fbc2_70221334 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,19 +61,26 @@
         </div>
     </div>
 <!-- jQuery -->
-<script src="./tpl/bootstrap/js/jquery.min.js"></script>
+<?php echo '<script'; ?>
+ src="./tpl/bootstrap/js/jquery.min.js"><?php echo '</script'; ?>
+>
 <!-- Bootstrap Core JavaScript -->
-<script src="./tpl/bootstrap/js/bootstrap.min.js"></script>
+<?php echo '<script'; ?>
+ src="./tpl/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
 <!-- MetisMenu CSS -->
 <link href="./tpl/bootstrap/admin/metisMenu/metisMenu.min.js" rel="stylesheet">
 
-<script type="text/javascript">
+<?php echo '<script'; ?>
+ type="text/javascript">
 $(function ()
 {
 	$('#btnLogin').click(function() {
 		$('#form1').submit();
 	});
 });
-</script>
+<?php echo '</script'; ?>
+>
 </body>
-</html>
+</html><?php }
+}

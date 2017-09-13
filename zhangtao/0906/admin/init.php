@@ -18,4 +18,6 @@ $smarty = Factory::getSmarty();// 初始化模板引擎
 
 $db = Factory::getMysql();// 实例化Mysql数据库对象
 
-
+// 初始化系统配置
+$setting = Factory::getSetting();
+$smarty->assign('setting', $setting);

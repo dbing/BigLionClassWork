@@ -79,11 +79,19 @@ class Mysql implements DB
 	 */
 	public function update($table, $data, $where)
 	{
-		$sql = "UPDATE $table SET $data WHERE $where";
+		$sql = "UPDATE $table SET ";
+		if(is_array($data))
+		{
+			foreach($data as $key => $val)
+			{
+				$sql .= $key ."='$val',";
+			}
+			$sql = substr($sql, 0, -1). " WHERE $where";
+		}
 		$res = mysql_query($sql);
 		if($res)
 		{
-			return true;
+			return mysql_affected_rows(); //返回影响的行数
 		}else
 		{
 			$this->error = mysql_error();
@@ -95,14 +103,26 @@ class Mysql implements DB
 	 * @param  查询单行
 	 * @return array 
 	 */
-	public function find($table, $where = 1)
+	public function find($table, $where = '')
 	{
-		$sql = "SELECT * FROM $table WHERE $where";
-		if($sql)
+		$sql = "SELECT * FROM $table";
+		if(is_array($where))
 		{
-			$res = mysql_query($sql);
-			$row = mysql_fetch_assoc($res);
-			return $row;
+			$arr = [];
+			foreach($where as $k => $v)
+			{
+				$arr[] = "$k='$v'";
+			}
+			$sql .= ' WHERE ' .implode(' AND ', $arr). ' LIMIT 1';
+		}
+		else
+		{
+			$sql .= ' WHERE ' .$where. ' LIMIT 1';
+		}
+		$res = mysql_query($sql);
+		if($res)
+		{
+			return mysql_fetch_assoc($res);
 		}else
 		{
 			$this->error = mysql_error();

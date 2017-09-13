@@ -4,13 +4,14 @@
  * @param  执行分类添加
  */
 require 'init.php';
-
+// 检测用户是否登录
+checkLogin();
 
 $post = $_POST;
 
 //上传相片
 $up = new Upload();
-$up->size = 8; //修改限制图片大小为8M内
+$up->size = $GLOBALS['setting']['UPLOAD_MAXSIZE']; //修改限制图片大小为8M内
 
 $photoPath = $up->uploadOne($_FILES['photo_path']);
 if(!$photoPath)
