@@ -36,5 +36,9 @@ class Factory
     {
         echo 'OK';
     }
+    static function getSetting()
+    {
+        return require ROOT_PATH .'/config/setconf.php';
+    }
 }
 ?>

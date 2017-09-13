@@ -22,4 +22,7 @@ spl_autoload_register('Loader::autoload');
 $smarty = Factory::getSmarty();
 //实例化mysql数据对象
 $db = Factory::getMySql();
+//初始化系统配置
+$sysconf = Factory::getSetting();
+$smarty->assign('sysconf',$sysconf);
 ?>

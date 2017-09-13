@@ -9,6 +9,8 @@
  * Time: 20:22
  */
 require 'init.php';
+//检测用户是否登录
+checkLoginEd();
 $photo = new PhotoModel();
 $res = $photo->select();
 $smarty->assign('res',$res);

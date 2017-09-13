@@ -9,6 +9,8 @@
  * Time: 11:33
  */
 require 'init.php';
+//检测用户是否登录
+checkLoginEd();
 $admin = new AdminModel();
 $admin = $admin->select();
 $smarty->assign('admin',$admin);
