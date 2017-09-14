@@ -1,4 +1,5 @@
 <?php
+defined('BIGLION') or die('Access denied :)_(:');
 /**
  * @author 张涛 2017/09/07
  * @param  文件上传大小
@@ -11,6 +12,7 @@ class Upload {
 	private $error;
 	private $size = 5; //文件大小 默认M
 	private $fileInfo = []; 
+	private $rootPath = 'uploads';
 	private $type = ['image/jpeg', 'image/gif', 'image/png'];
 
 	//多文件上传
@@ -92,7 +94,7 @@ class Upload {
 	 */
 	private function creatDir()
 	{
-		$dir = './images/' . date('Y-m-d');
+		$dir = $this->rootPath .'/images/' . date('Y-m-d');
 		if(!file_exists($dir))
 		{
 			if(!mkdir($dir, 0777, true))

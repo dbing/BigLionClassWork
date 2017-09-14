@@ -1,5 +1,6 @@
 <?php
 header("content-type:text/html;charset=utf-8");
+defined('BIGLION') or die('Access denied :)_(:');
 error_reporting(E_ALL ^E_DEPRECATED);
 /**
  * @author 张涛 2017/09/07
@@ -137,15 +138,36 @@ class Mysql implements DB
 	public function select($table, $where = 1)
 	{
 		$sql = "SELECT * FROM $table WHERE $where";
-		if($sql)
+		var_dump($sql);
+		$res = mysql_query($sql);
+		if($res)
 		{
-			$res = mysql_query($sql);
+			$arr = [];
 			while($row = mysql_fetch_assoc($res))
 			{
 				$arr[] = $row;
 			}
 			return $arr;
 		}else
+		{
+			$this->error = mysql_error();
+			return false;
+		}
+	}
+
+	/**
+	 * 统计信息
+	 */
+	public function count($table, $where = 1)
+	{
+		$sql = "SELECT COUNT(*) FROM $table WHERE $where";
+		$res = mysql_query($sql);
+		if($res)
+		{
+			$row = mysql_fetch_row($res);
+			return $row[0];
+		}
+		else
 		{
 			$this->error = mysql_error();
 			return false;

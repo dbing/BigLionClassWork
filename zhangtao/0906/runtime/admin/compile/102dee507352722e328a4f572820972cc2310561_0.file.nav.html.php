@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-09-12 23:09:28
+/* Smarty version 3.1.30, created on 2017-09-13 19:22:55
   from "D:\phpStudy\anzhuang\WWW\new-two\0906\admin\tpl\nav.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59b7f8a86e1d44_51683760',
+  'unifunc' => 'content_59b9150ff29470_42651213',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59b7f8a86e1d44_51683760 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59b9150ff29470_42651213 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 		<div class="navbar-header">
