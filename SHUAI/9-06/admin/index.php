@@ -9,7 +9,8 @@
  * Time: 19:36
  */
 require 'init.php';
-
+//检测用户是否登录
+checkLoginEd();
 //$res = $db->select('user');
 //var_dump($res);die;
 $smarty->display('index.html');

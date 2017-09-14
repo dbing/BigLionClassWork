@@ -85,7 +85,18 @@ class MySql implements Date
      */
     public function find($table,$where = 1)
     {
-             $sql = "SELECT * FROM $table WHERE $where";
+              $sql = "SELECT * FROM $table";
+              if (is_array($where))
+              {
+                  $arrwhere = array();
+                  foreach ($where as $key=>$val)
+                  {
+                      $arrwhere[] = "$key='$val'";
+                  }
+                  $sql .= ' WHERE '.implode( ' AND ',$arrwhere);
+                  $sql .= ' LIMIT 1';
+              }
+
              $res = mysqli_query($this->mysql(),$sql);
              if($res)
              {
@@ -106,11 +117,23 @@ class MySql implements Date
      */
     public function save($table,$upload,$where)
     {
-              $sql = "UPDATE $table SET $upload WHERE $where";
+              $sql = "UPDATE $table SET";
+              if (is_array($upload))
+              {
+                  foreach ($upload as $key=>$val)
+                  {
+                      $sql .= $key."='$val'";
+                  }
+                  $sql = substr($sql,0,-1);
+              }
+              if (is_string($where))
+              {
+                  $sql .= ' WHERE'.$where;
+              }
               $res = mysqli_query($this->mysql(),$sql);
               if($res)
               {
-                    return true;
+                    return mysqli_affected_rows($res);
               }else
               {
                      $this->error = mysqli_error($this->mysql());

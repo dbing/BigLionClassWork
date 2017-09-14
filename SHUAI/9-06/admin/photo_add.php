@@ -9,6 +9,8 @@
  * Time: 20:15
  */
 require 'init.php';
+//检测用户是否登录
+checkLoginEd();
 //查询分类
 $cat=$db->select('category');
 $smarty->assign('cat',$cat);

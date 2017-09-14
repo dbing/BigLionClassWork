@@ -9,11 +9,13 @@
  * Time: 23:30
  */
 require 'init.php';
+//检测用户是否登录
+checkLoginEd();
 $data = $_POST;
 
 //上传图片
 $up = new Upload();
-$up->size = 8;
+$up->size = $GLOBALS['sysconf']['UPLOAD_MAXSIZE'];
 $photo_path = $up->uploadOne($_FILES['photo_path']);
 if(!$photo_path)
 {

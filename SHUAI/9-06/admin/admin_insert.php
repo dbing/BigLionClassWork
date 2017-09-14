@@ -9,6 +9,8 @@
  * Time: 11:36
  */
 require 'init.php';
+//检测用户是否登录
+checkLoginEd();
 $data = $_POST;
 if ($data['password'] != $data['repassword'])
 {

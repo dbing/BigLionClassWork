@@ -9,5 +9,7 @@
  * Time: 11:33
  */
 require 'init.php';
+//检测用户是否登录
+checkLoginEd();
 $smarty->display('admin_add.html');
 ?>

@@ -9,5 +9,7 @@
  * Time: 23:12
  */
 require 'init.php';
+//检测用户是否登录
+checkLoginEd();
 $smarty->display('photo_recycle.html');
 ?>

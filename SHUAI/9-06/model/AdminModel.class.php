@@ -27,7 +27,23 @@ class AdminModel
         $data['register_time'] = time();
         return $this->db->add($this->tabla,$data);
     }
-
+    /**
+     * 查登录
+     */
+   public function checkLogin($name,$password)
+   {
+       $map = array('admin_name'=>$name,'password'=>$password);
+       return $this->db->find($this->tabla,$map);
+   }
+   public function updateLogin($admin_id)
+   {
+         $updateData = array(
+             'last_time' => time(),
+             'last_ip'  => getIp()
+         );
+         $where = "admin_id='$admin_id'";
+          return $this->db->save($this->tabla,$updateData,$where);
+   }
     /**
      * 查询多行
      * @return mixed

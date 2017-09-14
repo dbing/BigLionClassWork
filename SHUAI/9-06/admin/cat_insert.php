@@ -9,6 +9,8 @@
  * Time: 10:23
  */
 require 'init.php';
+//检测用户是否登录
+checkLoginEd();
 $data = $_POST;
 $catModel = new CategoryModel();
 $res = $catModel->add($data);

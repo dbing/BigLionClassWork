@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-09-13 11:45:37
+  from "E:\wamp64\www\9yue\BigLionClassWork\SHUAI\9-06\admin\tpl\login.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59b91a61d65e69_99688266',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '341cb0868dc907499decc0fa56e887672e9973e2' => 
+    array (
+      0 => 'E:\\wamp64\\www\\9yue\\BigLionClassWork\\SHUAI\\9-06\\admin\\tpl\\login.html',
+      1 => 1505227637,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_59b91a61d65e69_99688266 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +34,12 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
+>
     <![endif]-->
 </head>
 
@@ -42,19 +70,26 @@
         </div>
     </div>
 <!-- jQuery -->
-<script src="./tpl/bootstrap/js/jquery.min.js"></script>
+<?php echo '<script'; ?>
+ src="./tpl/bootstrap/js/jquery.min.js"><?php echo '</script'; ?>
+>
 <!-- Bootstrap Core JavaScript -->
-<script src="./tpl/bootstrap/js/bootstrap.min.js"></script>
+<?php echo '<script'; ?>
+ src="./tpl/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
 <!-- MetisMenu CSS -->
 <link href="./tpl/bootstrap/admin/metisMenu/metisMenu.min.js" rel="stylesheet">
 
-<script type="text/javascript">
+<?php echo '<script'; ?>
+ type="text/javascript">
 $(function ()
 {
 	$('#btnLogin').click(function() {
 		$('#form1').submit();
 	});
 });
-</script>
+<?php echo '</script'; ?>
+>
 </body>
-</html>
+</html><?php }
+}
