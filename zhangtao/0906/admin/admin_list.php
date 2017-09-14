@@ -4,7 +4,8 @@
  * @param  管理员列表
  */
 require 'init.php';
-
+// 检测用户是否登录
+checkLogin();
 
 $admin = new AdminModel;
 $adminList = $admin->select();

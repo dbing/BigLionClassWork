@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-09-09 09:46:48
+/* Smarty version 3.1.30, created on 2017-09-13 19:59:41
   from "D:\phpStudy\anzhuang\WWW\new-two\0906\admin\tpl\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59b34808ab7905_16029168',
+  'unifunc' => 'content_59b91dad47d777_58117911',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'af1461f6657160fe810a1af8b10a04e39b1c70cf' => 
     array (
       0 => 'D:\\phpStudy\\anzhuang\\WWW\\new-two\\0906\\admin\\tpl\\index.html',
-      1 => 1504795419,
+      1 => 1505303980,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.html' => 1,
   ),
 ),false)) {
-function content_59b34808ab7905_16029168 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59b91dad47d777_58117911 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +56,8 @@ function content_59b34808ab7905_16029168 (Smarty_Internal_Template $_smarty_tpl)
 							<span class="arrow glyphicon glyphicon-user"></span>
 						</div>
 						<div class="col-xs-9 text-right">
-							<div class="huge">999</div>
+							<div class="huge"><?php echo $_smarty_tpl->tpl_vars['count']->value['admin'];?>
+</div>
 							<div>账户数量</div>
 						</div>
 					</div>
@@ -100,7 +101,8 @@ function content_59b34808ab7905_16029168 (Smarty_Internal_Template $_smarty_tpl)
 							<span class="arrow glyphicon glyphicon-camera">
 						</div>
 						<div class="col-xs-9 text-right">
-							<div class="huge">333</div>
+							<div class="huge"><?php echo $_smarty_tpl->tpl_vars['count']->value['photo'];?>
+</div>
 							<div>图片数量</div>
 						</div>
 					</div>

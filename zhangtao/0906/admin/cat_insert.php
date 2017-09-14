@@ -5,7 +5,8 @@
  */
 require 'init.php';
 $catModel = new CatModel(); //引入model
-
+// 检测用户是否登录
+checkLogin();
 
 $post = $_POST;
 $res = $catModel->insert($post);

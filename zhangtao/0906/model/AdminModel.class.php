@@ -1,32 +1,32 @@
 <?php
+defined('BIGLION') or die('Access denied :)_(:');
 
-
-class AdminModel
+class AdminModel extends BaseModel
 {
-	protected $db;
 	protected $tableName = 'admin';
-	public function __construct()
-	{
-		$this->db = $GLOBALS['db'];
-	}
+
 	/**
-	 * 添加
+	 * 检测是否登录
 	 */
-	public function insert($data)
+	public function checkLogin($name, $pwd)
 	{
-		$res = $this->db->add($this->tableName, $data);
-		if($res)
-		{
-			return $this->db->getError();
-		}
-		return $res;
+		$map = [
+			'admin_name' => $name,
+			'admin_pwd'	 => $pwd,
+		];
+		return $this->db->find($this->tableName, $map);
 	}
 
 	/**
-	 * 查询
+	 * 修改
 	 */
-	public function select()
+	public function updateLogin($adminId)
 	{
-		return $this->db->select($this->tableName);
+		$arr = [
+			'last_time'	=> time(),
+			'last_ip'	=> getClientIp(), 
+		];
+		$where = " admin_id = '$adminId' ";
+		return $this->db->update($this->tableName, $arr, $where);
 	}
 }

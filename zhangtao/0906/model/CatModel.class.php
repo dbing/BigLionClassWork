@@ -1,18 +1,14 @@
 <?php
+defined('BIGLION') or die('Access denied :)_(:');
 /**
  * @author 张涛 2017/09/08
  * @param  Model
  */
 
-class CatModel
+class CatModel extends BaseModel
 {
 	protected $tableName = 'cat';   //表名
 	protected $db;					//Mysql数据库对象
-	//构造函数
-	public function __construct()
-	{
-		$this->db = $GLOBALS['db'];
-	}
 	/**
 	 * 添加
 	 */
@@ -22,11 +18,4 @@ class CatModel
 		return $this->db->add($this->tableName, $data);
 	}
 
-	/**
-	 * 查询多行
-	 */
-	public function select()
-	{
-		return $this->db->select($this->tableName);
-	}
 }

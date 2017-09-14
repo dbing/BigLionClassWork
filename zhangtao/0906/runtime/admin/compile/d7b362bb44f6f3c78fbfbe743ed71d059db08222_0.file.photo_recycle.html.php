@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-09-07 22:48:19
+/* Smarty version 3.1.30, created on 2017-09-13 19:23:03
   from "D:\phpStudy\anzhuang\WWW\new-two\0906\admin\tpl\photo_recycle.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59b15c33f117e3_07587169',
+  'unifunc' => 'content_59b915178e15a9_97845424',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.html' => 1,
   ),
 ),false)) {
-function content_59b15c33f117e3_07587169 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59b915178e15a9_97845424 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">

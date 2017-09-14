@@ -1,5 +1,6 @@
 <?php
 header("content-type:text/html;charset=utf-8");
+defined('BIGLION') or die('Access denied :)_(:');
 /**
  * @author 张涛 2017/09/07
  * @param  数据库接口  

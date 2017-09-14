@@ -1,8 +1,11 @@
 <?php
+header('content-type:text/html;charset=utf-8');
 /**
  * @author 张涛 2017/09/08
  * @param  引入类文件
  */
+
+define('BIGLION', 'dashiban'); //设置常量完成拒绝访问
 //定义项目路径
 define('ROOT_PATH', str_replace('\\', '/', dirname(__DIR__)));		//根路径
 
@@ -18,4 +21,6 @@ $smarty = Factory::getSmarty();// 初始化模板引擎
 
 $db = Factory::getMysql();// 实例化Mysql数据库对象
 
-
+// 初始化系统配置
+$setting = Factory::getSetting();
+$smarty->assign('setting', $setting);

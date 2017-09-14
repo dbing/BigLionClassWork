@@ -4,7 +4,8 @@
  * @param  分类添加
  */
 require 'init.php';
-
+// 检测用户是否登录
+checkLogin();
 //查询所有分类
 $catList = $db->select('cat', 'parent_id=0');
 $smarty->assign('catList', $catList);

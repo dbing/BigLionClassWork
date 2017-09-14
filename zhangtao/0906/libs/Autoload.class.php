@@ -1,4 +1,5 @@
 <?php
+defined('BIGLION') or die('Access denied :(');
 /**
  * @author 张涛 2017/09/10
  * @param  自动加载类

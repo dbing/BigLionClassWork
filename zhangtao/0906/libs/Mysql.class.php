@@ -1,5 +1,6 @@
 <?php
 header("content-type:text/html;charset=utf-8");
+defined('BIGLION') or die('Access denied :)_(:');
 error_reporting(E_ALL ^E_DEPRECATED);
 /**
  * @author 张涛 2017/09/07
@@ -79,11 +80,19 @@ class Mysql implements DB
 	 */
 	public function update($table, $data, $where)
 	{
-		$sql = "UPDATE $table SET $data WHERE $where";
+		$sql = "UPDATE $table SET ";
+		if(is_array($data))
+		{
+			foreach($data as $key => $val)
+			{
+				$sql .= $key ."='$val',";
+			}
+			$sql = substr($sql, 0, -1). " WHERE $where";
+		}
 		$res = mysql_query($sql);
 		if($res)
 		{
-			return true;
+			return mysql_affected_rows(); //返回影响的行数
 		}else
 		{
 			$this->error = mysql_error();
@@ -95,14 +104,26 @@ class Mysql implements DB
 	 * @param  查询单行
 	 * @return array 
 	 */
-	public function find($table, $where = 1)
+	public function find($table, $where = '')
 	{
-		$sql = "SELECT * FROM $table WHERE $where";
-		if($sql)
+		$sql = "SELECT * FROM $table";
+		if(is_array($where))
 		{
-			$res = mysql_query($sql);
-			$row = mysql_fetch_assoc($res);
-			return $row;
+			$arr = [];
+			foreach($where as $k => $v)
+			{
+				$arr[] = "$k='$v'";
+			}
+			$sql .= ' WHERE ' .implode(' AND ', $arr). ' LIMIT 1';
+		}
+		else
+		{
+			$sql .= ' WHERE ' .$where. ' LIMIT 1';
+		}
+		$res = mysql_query($sql);
+		if($res)
+		{
+			return mysql_fetch_assoc($res);
 		}else
 		{
 			$this->error = mysql_error();
@@ -117,15 +138,36 @@ class Mysql implements DB
 	public function select($table, $where = 1)
 	{
 		$sql = "SELECT * FROM $table WHERE $where";
-		if($sql)
+		var_dump($sql);
+		$res = mysql_query($sql);
+		if($res)
 		{
-			$res = mysql_query($sql);
+			$arr = [];
 			while($row = mysql_fetch_assoc($res))
 			{
 				$arr[] = $row;
 			}
 			return $arr;
 		}else
+		{
+			$this->error = mysql_error();
+			return false;
+		}
+	}
+
+	/**
+	 * 统计信息
+	 */
+	public function count($table, $where = 1)
+	{
+		$sql = "SELECT COUNT(*) FROM $table WHERE $where";
+		$res = mysql_query($sql);
+		if($res)
+		{
+			$row = mysql_fetch_row($res);
+			return $row[0];
+		}
+		else
 		{
 			$this->error = mysql_error();
 			return false;
